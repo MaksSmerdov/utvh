@@ -53,7 +53,7 @@
   }
 
   &__param.no-cursor {
-    cursor: default; // Убираем курсор pointer для элементов без тултипов
+    cursor: default;
   }
 
   &__param.enabled:hover {

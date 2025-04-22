@@ -36,7 +36,8 @@
     cursor: default;
   }
 
-  &__param.hoverable:hover {
+  &__param.enabled:hover {
+    cursor: pointer;
     background-color: vars.$ulva-lactuca-green;
   }
 
