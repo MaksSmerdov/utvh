@@ -1,0 +1,77 @@
+.mnemo {
+  &__gif {
+    position: absolute;
+    z-index: 1;
+    width: 31px;
+    height: 31px;
+    animation: rotate 1s infinite linear;
+    animation-play-state: paused;
+  }
+
+  &__gif-img {
+    width: 31px;
+    height: 31px;
+    animation: rotate 1s infinite linear;
+    animation-play-state: paused;
+  }
+
+  &__gif-pump-1-1 {
+    left: 17.4%;
+    top: 14.3%;
+  }
+
+  &__gif-pump-1-2 {
+    left: 17.4%;
+    top: 20.4%;
+  }
+
+  &__gif-pump-2-1 {
+    bottom: 23.5%;
+    right: 20.6%;
+  }
+
+  &__gif-pump-2-2 {
+    bottom: 18.2%;
+    right: 20.6%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1280px) {
+  .mnemo {
+    
+    &__gif-img {
+      width: 25px;
+      height: 25px;
+    }
+
+    &__gif-pump-1-1 {
+      left: 17.1%;
+      top: 14%;
+    }
+
+    &__gif-pump-1-2 {
+      left: 17.1%;
+      top: 20%;
+    }
+
+    &__gif-pump-2-1 {
+      bottom: 23.1%;
+      right: 20.2%;
+    }
+
+    &__gif-pump-2-2 {
+      bottom: 17.8%;
+      right: 20.2%;
+    }
+  }
+}

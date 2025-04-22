@@ -1,0 +1,252 @@
+@use "../../../styles/mixins" as mixins;
+@use "../../../styles/variables" as vars;
+
+.mnemo {
+  position: relative;
+  width: 1000px;
+
+  &__control {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  &__level {
+    position: absolute;
+    width: 42px;
+    height: 85px;
+    top: 29.3%;
+    left: 35.5%;
+  }
+
+  &__descr {
+    position: absolute;
+    @include mixins.text-style(16px, 14px, 600, vars.$hulk);
+    text-align: center;
+    z-index: 1;
+  }
+
+  &__img {
+    width: 1000px;
+  }
+
+  &__alarm {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 58px;
+
+    &-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      max-width: 70px;
+      @include mixins.text-style(14px, 14px, 600);
+      text-align: center;
+    }
+  }
+
+}
+
+.im {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 14px;
+  @include mixins.text-style(16px, 14px, 600, vars.$black);
+
+  &__level {
+    top: 31.5%;
+    left: 79.5%;
+    color: vars.$blue;
+  }
+
+  &__vacuum {
+    top: 63%;
+    left: 78%;
+  }
+
+  &__vozduh {
+    top: 72%;
+    left: 9.2%;
+  }
+
+  &__gaz {
+    top: 48%;
+    left: 15%;
+  }
+}
+
+.lamp {
+  &__active {
+    &-red {
+      background-color: vars.$red;
+      color: vars.$black;
+    }
+
+    &-green {
+      background-color: vars.$hulk;
+      color: vars.$black;
+    }
+  }
+
+  &__inactive {
+    background-color: vars.$grey;
+    color: vars.$black;
+  }
+}
+
+.alarm {
+  &__vozduh-low {
+    top: 9.5%;
+    left: 6.7%;
+  }
+
+  &__gaz-low {
+    top: 9.5%;
+    left: 16.4%;
+  }
+
+  &__gaz-high {
+    top: 9.5%;
+    left: 26.1%;
+  }
+
+  &__level-low {
+    top: 9.5%;
+    left: 35.8%;
+  }
+
+  &__level-high {
+    top: 9.5%;
+    left: 45.5%;
+  }
+
+  &__torch-disappeared {
+    top: 9.5%;
+    left: 55.2%;
+  }
+
+  &__vacuum-low {
+    top: 9.5%;
+    left: 64.9%;
+  }
+
+  &__smoke-off {
+    top: 9.5%;
+    left: 74.5%;
+  }
+
+  &__boiler-stop {
+    top: 9.5%;
+    left: 84.3%;
+  }
+}
+
+.info {
+
+  &__boiler-stop {
+    bottom: 5.1%;
+    left: 16.4%;
+  }
+
+  &__fan-mode {
+    bottom: 5.1%;
+    left: 26.1%;
+  }
+
+  &__ignition {
+    bottom: 5.1%;
+    left: 35.8%;
+  }
+
+  &__stabilization {
+    bottom: 5.1%;
+    left: 45.5%;
+  }
+
+  &__ignition-burner {
+    bottom: 5.1%;
+    left: 55.2%;
+  }
+
+  &__stabilization-burner {
+    bottom: 5.1%;
+    left: 64.9%;
+  }
+
+  &__work-mode {
+    bottom: 5.1%;
+    left: 74.6%;
+  }
+}
+
+.text {
+  &__fan {
+    top: 80.5%;
+    left: 88.5%;
+  }
+
+  &__smoke {
+    top: 80.5%;
+    left: 18%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .mnemo__level {
+    top: 28.5%;
+    left: 35.5%;
+  }
+  .im {
+    &__level {
+      top: 30.5%;
+    }
+
+    &__gaz {
+      top: 47%;
+    }
+  }
+
+  .alarm {
+    &__vozduh-low {
+      top: 8.6%;
+    }
+
+    &__gaz-low {
+      top: 8.6%;
+    }
+
+    &__gaz-high {
+      top: 8.6%;
+    }
+
+    &__level-low {
+      top: 8.6%;
+    }
+
+    &__level-high {
+      top: 8.6%;
+    }
+
+    &__torch-disappeared {
+      top: 8.6%;
+    }
+
+    &__vacuum-low {
+      top: 8.6%;
+    }
+
+    &__smoke-off {
+      top: 8.6%;
+    }
+
+    &__boiler-stop {
+      top: 8.6%;
+    }
+  }
+}

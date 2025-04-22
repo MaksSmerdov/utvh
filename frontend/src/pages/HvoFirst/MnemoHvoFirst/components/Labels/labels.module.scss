@@ -1,0 +1,188 @@
+@use "../../../../../styles/mixins" as mixins;
+@use "../../../../../styles/variables" as vars;
+
+.mnemo {
+  &__param-descr {
+    margin: 0;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    @include mixins.text-style(14px, 14px, 600, vars.$hunter-green);
+
+  }
+
+  @media (max-width: 1280px) {
+    &__param-descr {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+
+/* descriptions */
+.pomeshenie-2-text {
+  max-width: 200px;
+  font-size: 12px;
+  right: 8%;
+  bottom: 28.8%;
+}
+
+.zadanie-uroven-e1-1-2-text {
+  right: 41.5%;
+  bottom: 38.5%;
+  font-size: 14px;
+}
+
+.kontrol-im-1-text {
+  right: 42%;
+  bottom: 54%;
+  font-size: 12px;
+}
+
+.f1-1-text {
+  left: 33.5%;
+  top: 21%;
+}
+
+.f1-2-text {
+  left: 47.2%;
+  top: 21%;
+}
+
+.f1-3-text {
+  right: 36.5%;
+  top: 21%;
+}
+
+.f1-4-text {
+  right: 22.7%;
+  top: 21%;
+}
+
+.f2-1-text {
+  left: 18%;
+  bottom: 43%;
+}
+
+.f2-2-text {
+  left: 31.5%;
+  bottom: 43%;
+}
+
+.f2-3-text {
+  left: 45%;
+  bottom: 43%;
+}
+
+.e1-1-text {
+  right: 31.8%;
+  bottom: 46%;
+}
+
+.e1-2-text {
+  right: 19%;
+  bottom: 46%;
+}
+
+.n1-1-text {
+  left: 26.5%;
+  top: 15.2%;
+}
+
+.n1-2-text {
+  left: 26.5%;
+  top: 21.2%;
+}
+
+.n1-3-text {
+  left: 26.5%;
+  top: 27.2%;
+}
+
+.n2-1-text {
+  right: 28%;
+  bottom: 24.5%;
+}
+
+.n2-2-text {
+  right: 28%;
+  bottom: 19%;
+}
+
+.n3-1-text {
+  right: 28%;
+  bottom: 11.5%;
+}
+
+.n3-2-text {
+  right: 28%;
+  bottom: 6.5%;
+}
+
+.rashod-na-promyvku-text {
+  right: 0;
+  bottom: 52.5%;
+  max-width: 72px;
+}
+
+.rashod-na-vhode-text {
+  top: 16%;
+  left: 4%;
+}
+
+.davl-vhod-ustanivki-text {
+  top: 33%;
+  left: 4.5%;
+}
+
+.davl-posle-nasosov-1-1-2-3-text {
+  top: 6.5%;
+  left: 10.5%;
+}
+
+.davl-pered-f3-1-7-text {
+  max-width: 88px;
+  bottom: 24.2%;
+  right: 0%;
+}
+
+.davl-posle-nasosov-3-1-2-text {
+  max-width: 72px;
+  bottom: 14%;
+  right: 0%;
+}
+
+@media (max-width: 1280px) {
+  .rashod-na-promyvku-text {
+    right: -7px;
+  }
+
+  .rashod-na-vhode-text {
+    top: 15.5%;
+    left: 3.5%;
+  }
+
+  .davl-posle-nasosov-1-1-2-3-text {
+    top: 5.8%;
+  }
+
+  .davl-pered-f3-1-7-text {
+    max-width: 65px;
+  }
+
+  .davl-posle-nasosov-3-1-2-text {
+    max-width: 60px;
+  }
+
+  .pomeshenie-2-text {
+    max-width: 200px;
+    font-size: 11px;
+    right: 7.5%;
+    bottom: 28.8%;
+  }
+
+  .kontrol-im-1-text {
+    right: 41.5%;
+  }
+}

@@ -1,0 +1,40 @@
+@use '../../styles/mixins' as mixins;
+@use '../../styles/variables' as vars;
+
+.chart-container {
+  margin: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  position: relative;
+}
+
+.dynamic-graph {
+  &__datepicker {
+    width: 150px;
+  }
+
+  &__calendar {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 10px;
+
+    &--span {
+      color: vars.$hulk;
+      font-weight: 600;
+    }
+  }
+
+  &__btns {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .dynamic-graph {
+
+  }
+}

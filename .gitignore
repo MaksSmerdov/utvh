@@ -1,0 +1,19 @@
+#node_modules
+/backend/node_modules
+/frontend/node_modules
+
+#frontend ignore
+/frontend/public/content
+/frontend/dist
+/frontend/*.local
+
+#backend ignore
+/backend/.env
+/backend/src/logs/*
+/backend/icon_offline.ico
+/backend/icon_online.ico
+/backend/settings.ini
+/backend/start_server.exe
+
+#others
+.idea

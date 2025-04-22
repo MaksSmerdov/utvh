@@ -1,0 +1,182 @@
+@use "./mixins" as mixins;
+@use "./variables" as vars;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dfdcdc;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: vars.$hulk;
+  border-radius: 20px;
+}
+
+body {
+  padding: 10px 20px;
+  font-family: "Bitter", sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: rgb(238, 235, 235);
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.btn-reset {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+
+.level-indicator.warning {
+  animation: blinkBackground 1s linear infinite;
+}
+
+@keyframes blinkBackground {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: rgba(red, 0.3);
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+.mnemo {
+  &__param-descr {
+    margin: 0;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    @include mixins.text-style(14px, 14px, 600, vars.$hunter-green);
+  }
+
+  @media (max-width: 1280px) {
+    &__param-descr {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}
+
+.table {
+  width: 100%;
+  max-width: 600px;
+  min-width: 410px;
+  border-collapse: collapse;
+  box-shadow: 0 0 5px 0 black;
+  border: 2px solid green;
+
+  &__thead {
+    background: linear-gradient(135deg, green, #81c784);
+    text-align: center;
+  }
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    @include mixins.text-style(18px, 25px, 700, vars.$hulk);
+  }
+
+  &__tr {
+    height: 30px;
+  }
+
+  &__th {
+    padding: 5px;
+    text-align: center;
+    @include mixins.text-style(18px, 18px, 600, vars.$white);
+    border: 1px solid #e0e0e0;
+  }
+
+  &__td {
+    letter-spacing: 1px;
+    text-align: center;
+    @include mixins.text-style(18px, 18px, 600);
+    border: 1px solid #e0e0e0;
+  }
+
+  &__subheader {
+    padding: 5px;
+  }
+
+  &__left {
+    text-align: left;
+    padding: 10px;
+  }
+
+  &__value {
+    font-weight: 600;
+    color: vars.$hulk;
+  }
+
+  &__body {
+    .table__tr {
+      &:nth-child(odd) {
+        background-color: #f5f5f5;
+      }
+
+      &:nth-child(even) {
+        background-color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .mnemo__param {
+    padding: 1px;
+
+    &-text {
+      @include mixins.text-style(12px, 12px, 600, vars.$hulk);
+    }
+
+    &-descr {
+      @include mixins.text-style(12px, 12px, 600, rgb(10, 59, 10));
+    }
+  }
+  .table {
+    &__title {
+      margin-bottom: 10px;
+      @include mixins.text-style(14px, 16px, 700, vars.$hulk);
+    }
+
+    &__th {
+      padding: 5px;
+      @include mixins.text-style(12px, 12px, 600, vars.$white);
+    }
+
+    &__td {
+      @include mixins.text-style(12px, 12px, 600);
+    }
+
+    &__subheader {
+      padding: 2px;
+    }
+
+    &__left {
+      padding: 4px;
+    }
+  }
+}

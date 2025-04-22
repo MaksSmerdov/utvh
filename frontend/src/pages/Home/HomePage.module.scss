@@ -1,0 +1,46 @@
+@use '../../../src/styles/mixins' as mixins;
+@use '../../../src/styles/variables' as vars;
+
+.home-container {
+  background-color: vars.$white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.subtabs-container {
+  display: flex;
+  margin: 10px;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+
+.content-container {
+  background-color: vars.$white;
+  margin: 10px;
+  padding-bottom: 10px;
+  transition: height 0.3s ease-in-out;
+}
+
+.customTabs {
+  border-radius: 10px 10px 0 0;
+
+  :global(.MuiButtonBase-root.MuiTab-textColorPrimary) {
+    width: 175px;
+    @include mixins.text-style(20px, null, 600, vars.$hulk);
+    text-transform: none;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgb(0, 128, 0, 0.2);
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
+
+  :global(.MuiButtonBase-root.Mui-selected) {
+    @include mixins.text-style(20px, null, 600, vars.$hulk);
+  }
+
+  :global(.MuiTabs-indicator.MuiTabs-indicator) {
+    background-color: vars.$hulk;
+  }
+}

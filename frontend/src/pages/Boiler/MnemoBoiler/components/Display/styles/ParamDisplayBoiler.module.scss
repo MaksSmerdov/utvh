@@ -1,0 +1,89 @@
+@use "../../../../../../styles/mixins" as mixins;
+@use "../../../../../../styles/variables" as vars;
+
+
+.mnemo {
+  &__param {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid vars.$black;
+    border-radius: 3px;
+    @include mixins.text-style(14px, 16px, 600);
+    transition: box-shadow 0.5s ease;
+    z-index: 2;
+
+    &.enabled {
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 0 10px 4px rgba(0, 128, 0, 0.5);
+        background-color: rgba(0, 255, 0, 0.1);
+        transition: box-shadow 0.5s ease;
+      }
+    }
+
+    &-naimenov {
+      background-color: vars.$hulk;
+      color: black;
+      padding: 3px;
+      border-bottom: 1px solid vars.$black;
+    }
+
+    &-text {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      background-color: rgb(197, 192, 192);
+      padding: 3px;
+    }
+
+    &-value {
+      color: vars.$blue;
+    }
+
+    &-span {
+      color: vars.$black;
+    }
+  }
+}
+
+.davlenie-gaza {
+  top: 43%;
+  left: 30%;
+}
+
+.davlenie-vozduha {
+  top: 63%;
+  left: 30%;
+}
+
+.davlenie-para {
+  top: 21%;
+  left: 57%;
+}
+
+.vacuum {
+  top: 63%;
+  left: 57%;
+}
+
+.level {
+  top: 31%;
+  left: 41%;
+}
+
+@media (max-width: 1280px) {
+  .davlenie-gaza {
+    top: 42%;
+  }
+
+  .davlenie-para {
+    top: 20.5%;
+  }
+
+  .level {
+    top: 30%;
+  }
+
+}

@@ -1,0 +1,110 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mnemo {
+  &__gif {
+    position: absolute;
+    z-index: 1;
+    width: 31px;
+    height: 31px;
+    animation: rotate 1s infinite linear;
+    animation-play-state: paused;
+  }
+
+  &__gif-img {
+    width: 31px;
+    height: 31px;
+    animation: rotate 1s infinite linear;
+    animation-play-state: paused;
+  }
+
+  &__gif-pump {
+    &-4-1 {
+      bottom: 19.2%;
+      left: 5.7%;
+    }
+
+    &-4-2 {
+      bottom: 19.2%;
+      left: 18.5%;
+    }
+
+    &-5-1 {
+      bottom: 19.2%;
+      left: 31.3%;
+    }
+
+    &-5-2 {
+      bottom: 19.2%;
+      left: 44.1%;
+    }
+
+    &-6-1 {
+      bottom: 19.2%;
+      right: 40.4%;
+    }
+
+    &-6-2 {
+      bottom: 19.2%;
+      right: 27.6%;
+    }
+
+    &-6-3 {
+      bottom: 19.2%;
+      right: 14.8%;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .mnemo {
+    &__gif-img {
+      width: 25px;
+      height: 25px;
+    }
+
+    &__gif-pump {
+      &-4-1 {
+        bottom: 19%;
+        left: 5.2%;
+      }
+
+      &-4-2 {
+        bottom: 19%;
+        left: 18%;
+      }
+
+      &-5-1 {
+        bottom: 19%;
+        left: 30.8%;
+      }
+
+      &-5-2 {
+        bottom: 19%;
+        left: 43.8%;
+      }
+
+      &-6-1 {
+        bottom: 19%;
+        right: 40.2%;
+      }
+
+      &-6-2 {
+        bottom: 19%;
+        right: 27.4%;
+      }
+
+      &-6-3 {
+        bottom: 19%;
+        right: 14.6%;
+      }
+    }
+  }
+}

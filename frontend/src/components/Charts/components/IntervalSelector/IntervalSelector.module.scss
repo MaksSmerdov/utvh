@@ -1,0 +1,15 @@
+@use "../../../../styles/mixins" as mixins;
+@use "../../../../styles/variables" as vars;
+
+.interval-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+
+  &__label {
+    font-size: 18px;
+    font-weight: 800;
+    color: vars.$carbon;
+  }
+}

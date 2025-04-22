@@ -1,0 +1,277 @@
+@use "../../../../../styles/mixins" as mixins;
+@use "../../../../../styles/variables" as vars;
+
+.mnemo {
+  &__param-descr {
+    margin: 0;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    @include mixins.text-style(14px, 14px, 600, vars.$hunter-green);
+  }
+
+  @media (max-width: 1280px) {
+    &__param-descr {
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}
+
+/* descriptions */
+.rashod-vody-filtr-text {
+  top: 10%;
+  left: 47.9%;
+  max-width: 100px;
+}
+
+.rashod-kanalizacia-text {
+  bottom: 36%;
+  left: 43.4%;
+}
+
+.davlenie-posle-filtrov-text {
+  top: 27.5%;
+  right: 44%;
+  max-width: 100px;
+}
+
+.im2-text {
+  top: 10%;
+  right: 32.4%;
+}
+
+.f3-1-text {
+  top: 21.5%;
+  left: 7.4%;
+}
+
+.f3-2-text {
+  top: 21.5%;
+  left: 19.7%;
+}
+
+.f3-3-text {
+  top: 21.5%;
+  left: 32%;
+}
+
+.f3-4-text {
+  top: 50.5%;
+  left: 6.6%;
+}
+
+.f3-5-text {
+  top: 50.5%;
+  left: 16.8%;
+}
+
+.f3-6-text {
+  top: 50.5%;
+  left: 26.9%;
+}
+
+.f3-7-text {
+  top: 50.5%;
+  left: 37.2%;
+}
+
+.f4-1-text {
+  top: 50.5%;
+  left: 47.4%;
+}
+
+.f4-2-text {
+  top: 50.5%;
+  left: 57.6%;
+}
+
+.f4-3-text {
+  top: 50.5%;
+  left: 67.8%;
+}
+
+.e2-1-text {
+  top: 16%;
+  right: 34.5%;
+}
+
+.e2-2-text {
+  top: 16%;
+  right: 13%;
+}
+
+.n4-1-text {
+  left: 2.3%;
+  bottom: 21.5%;
+}
+
+.n4-2-text {
+  left: 15.3%;
+  bottom: 21.5%;
+}
+
+.n5-1-text {
+  left: 28.3%;
+  bottom: 21.5%;
+}
+
+.n5-2-text {
+  left: 41%;
+  bottom: 21.5%;
+}
+
+.n6-1-text {
+  left: 53.9%;
+  bottom: 21.5%;
+}
+
+.n6-2-text {
+  left: 66.5%;
+  bottom: 21.5%;
+}
+
+.n6-3-text {
+  left: 79.4%;
+  bottom: 21.5%;
+}
+
+.carbon-text {
+  bottom: 2%;
+  right: 14.5%;
+}
+
+.k265-text {
+  bottom: 2%;
+  right: 48%;
+}
+
+.k312-text {
+  bottom: 2%;
+  left: 7%;
+}
+
+.temper-e2-1-sever-text {
+  top: 17%;
+  right: 24.3%;
+  max-width: 90px;
+}
+
+.temper-e2-1-ug-text {
+  top: 17%;
+  right: 41.1%;
+  max-width: 70px;
+}
+
+.temper-e2-2-sever-text {
+  top: 17%;
+  right: 2.4%;
+  max-width: 90px;
+}
+
+.temper-e2-2-ug-text {
+  top: 17%;
+  right: 19%;
+  max-width: 71px;
+}
+
+.uroven-titan-e2-1-text {
+  top: 27%;
+  right: 36.4%;
+  max-width: 50px;
+  color: rgb(47, 0, 255);
+}
+
+.uroven-mida-e2-1-text {
+  top: 27%;
+  right: 31%;
+  max-width: 50px;
+  color: #360261;
+}
+
+.uroven-titan-e2-2-text {
+  top: 27%;
+  right: 14.8%;
+  max-width: 50px;
+  color: rgb(47, 0, 255);
+}
+
+.uroven-mida-e2-2-text {
+  top: 27%;
+  right: 9.5%;
+  max-width: 50px;
+  color: #360261;
+}
+
+.pomeshenie-text {
+  left: 0;
+  top: 4%;
+}
+
+.kanalizacia-text {
+  left: 7%;
+  bottom: 29.7%;
+}
+
+@media (max-width: 1280px) {
+  .rashod-vody-filtr-text {
+    top: 9.5%;
+    left: 46.9%;
+    min-width: 85px;
+  }
+
+  .davlenie-posle-filtrov-text {
+    top: 26.5%;
+    right: 44%;
+    max-width: 78px;
+  }
+
+  .im2-text {
+    top: 9.9%;
+  }
+
+  .davlenie-posle-filtrov-text {
+    top: 26.5%;
+    right: 44%;
+    max-width: 78px;
+  }
+
+  .rashod-vody-filtr-text {
+    top: 9.5%;
+    left: 46.9%;
+    min-width: 85px;
+  }
+
+  .temper-e2-1-sever-text,
+  .temper-e2-2-sever-text {
+    max-width: 66px;
+    top: 17.4%;
+  }
+
+  .temper-e2-1-ug-text,
+  .temper-e2-2-ug-text {
+    max-width: 52px;
+    top: 17.4%
+  }
+
+  .temper-e2-1-sever-text {
+    right: 24.8%;
+  }
+
+  .temper-e2-2-ug-text {
+    right: 19.3%;
+  }
+
+  .uroven-titan-e2-1-text,
+  .uroven-titan-e2-2-text,
+  .uroven-mida-e2-1-text,
+  .uroven-mida-e2-2-text {
+    max-width: 43px;
+  }
+
+  .rashod-kanalizacia-text {
+    bottom: 36%;
+    left: 44%;
+  }
+}

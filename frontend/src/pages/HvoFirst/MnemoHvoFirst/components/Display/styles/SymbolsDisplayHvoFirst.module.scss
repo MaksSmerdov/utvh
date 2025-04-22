@@ -1,0 +1,51 @@
+@use "../../../../../../styles/mixins" as mixins;
+@use "../../../../../../styles/variables" as vars;
+
+.mnemo__symbols {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  z-index: 1;
+
+  &-title {
+    margin: 0;
+    @include mixins.text-style(24px, 35px, 600, vars.$hulk);
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &-descr {
+    margin: 0;
+    font-style: italic;
+    @include mixins.text-style(18px, 29px, 400, vars.$black);
+  }
+
+  &-name {
+    margin-right: 40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 7px;
+  }
+}
+
+
+@media (max-width: 1280px) {
+  .mnemo__symbols {
+    &__symbols-title {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__symbols-descr {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

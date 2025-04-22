@@ -1,0 +1,352 @@
+@use "../../../styles/mixins" as mixins;
+@use "../../../styles/variables" as vars;
+
+.mnemo {
+  margin-top: 10px;
+  position: relative;
+  width: 1200px;
+
+  &__img {
+    width: 1200px;
+  }
+
+  &__control {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    bottom: 32.5%;
+  }
+
+  &__param {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 3px 7px;
+    position: absolute;
+    background-color: vars.$sharp-pebbles;
+    border-radius: 7px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1;
+  }
+
+  &__param.no-cursor {
+    cursor: default;
+  }
+
+  &__param.hoverable:hover {
+    background-color: vars.$ulva-lactuca-green;
+  }
+
+  &__param-text {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 600;
+    color: vars.$blue;
+  }
+
+  &__param-naimenov {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 400;
+    color: vars.$black;
+  }
+
+  &__valve {
+    position: absolute;
+    top: 8%;
+    right: 33%
+  }
+
+  &__level {
+    position: absolute;
+    width: 47px;
+    height: 91px;
+  }
+
+}
+
+.e2-1 {
+  &-titan {
+    bottom: 74.3%;
+    right: 35.6%;
+  }
+
+  &-mida {
+    bottom: 74.3%;
+    right: 31.9%;
+  }
+}
+
+
+/* parameters */
+.rashod-vody-filtr {
+  padding: 2px 3px;
+  top: 4.5%;
+  left: 49.2%;
+  min-width: 67px;
+}
+
+.rashod-kanalizacia {
+  padding: 2px 3px;
+  bottom: 30.5%;
+  left: 47.8%;
+  min-width: 67px;
+}
+
+.davlenie-posle-filtrov {
+  top: 31%;
+  right: 44%;
+  min-width: 100px;
+}
+
+.im2 {
+  top: 4.5%;
+  right: 31.5%;
+  min-width: 55px;
+}
+
+.davlenie-carbon {
+  bottom: 2%;
+  left: 88%;
+}
+
+.davlenie-k265 {
+  bottom: 2%;
+  left: 54.5%;
+}
+
+.davlenie-k312 {
+  bottom: 2%;
+  left: 18%;
+}
+
+.temper-e2-1-sever {
+  top: 20.5%;
+  right: 25.1%;
+  min-width: 70px;
+}
+
+.temper-e2-1-ug {
+  top: 20.5%;
+  right: 41%;
+  min-width: 70px;
+}
+
+.temper-e2-2-ug {
+  top: 20.5%;
+  right: 18.9%;
+  min-width: 70px;
+}
+
+.temper-e2-2-sever {
+  top: 20.5%;
+  right: 3.2%;
+  min-width: 70px;
+}
+
+.uroven-titan-e2-1 {
+  padding: 2px;
+  top: 30%;
+  right: 36.3%;
+}
+
+.uroven-mida-e2-1 {
+  padding: 2px;
+  top: 30%;
+  right: 30%;
+}
+
+.uroven-titan-e2-2 {
+  padding: 2px;
+  top: 30%;
+  right: 14.8%;
+}
+
+.uroven-mida-e2-2 {
+  padding: 2px;
+  top: 30%;
+  right: 8.3%;
+}
+
+.davlenie-n4-1 {
+  left: 8.5%;
+  bottom: 18%;
+}
+
+.n4-1-hz {
+  left: 8.5%;
+  bottom: 21.5%;
+}
+
+.davlenie-n4-2 {
+  left: 21.3%;
+  bottom: 18%;
+}
+
+.n4-2-hz {
+  left: 21.3%;
+  bottom: 21.5%;
+}
+
+.davlenie-n5-1 {
+  left: 34.2%;
+  bottom: 18%;
+}
+
+.n5-1-hz {
+  left: 34.2%;
+  bottom: 21.5%;
+}
+
+.davlenie-n5-2 {
+  left: 47.1%;
+  bottom: 18%;
+}
+
+.n5-2-hz {
+  left: 47.1%;
+  bottom: 21.5%;
+}
+
+.davlenie-n6-1 {
+  left: 60%;
+  bottom: 18%;
+}
+
+.n6-1-hz {
+  left: 60%;
+  bottom: 21.5%;
+}
+
+.davlenie-n6-2 {
+  left: 72.7%;
+  bottom: 18%;
+}
+
+.n6-2-hz {
+  left: 72.7%;
+  bottom: 21.5%;
+}
+
+.davlenie-n6-3 {
+  left: 85.5%;
+  bottom: 18%;
+}
+
+.n6-3-hz {
+  left: 85.5%;
+  bottom: 21.5%;
+}
+
+@media (max-width: 1280px) {
+  .mnemo {
+    width: 976px;
+
+    &__img {
+      width: 976px;
+    }
+
+    &__param-naimenov,
+    &__param-text {
+      font-size: 13px;
+      line-height: 13px;
+    }
+
+    &__param {
+      padding: 0 2px;
+    }
+
+    &__gif-img {
+      width: 25px;
+      height: 25px;
+    }
+
+    &__level {
+      width: 39px;
+      height: 75px;
+    }
+  }
+
+  .davlenie-posle-filtrov {
+    right: 43.6%;
+    min-width: 85px;
+  }
+
+  .im2 {
+    min-width: 45px;
+  }
+
+  .rashod-vody-filtr {
+    min-width: 54px;
+  }
+
+  .mnemo__uroven-naimenov {
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+  .temper-e2-1-sever,
+  .temper-e2-1-ug,
+  .temper-e2-2-sever,
+  .temper-e2-2-ug {
+    min-width: 51px;
+    top: 21%;
+  }
+
+  .temper-e2-2-ug {
+    right: 19.3%;
+  }
+
+  .temper-e2-1-sever {
+    right: 25.5%;
+  }
+
+  .rashod-kanalizacia {
+    min-width: 55px;
+  }
+
+  .uroven-titan-e2-1 {
+    right: 36%;
+    top: 30.4%;
+  }
+
+  .uroven-mida-e2-1 {
+    top: 30.4%;
+    right: 29.5%;
+  }
+
+  .uroven-titan-e2-2 {
+    top: 30.4%;
+    right: 14.4%;
+  }
+
+  .uroven-mida-e2-2 {
+    top: 30.4%;
+    right: 8.2%;
+  }
+
+  .column-e2-1 {
+    top: 15.5%;
+    width: 75px;
+    height: 75px;
+  }
+
+  .column-e2-2 {
+    top: 15.5%;
+    width: 75px;
+    height: 75px;
+  }
+
+  .im1-kran {
+    bottom: 44.5%;
+    right: 44.2%;
+  }
+
+  .im2-kran {
+    top: 7.6%;
+    right: 32.9%;
+  }
+}

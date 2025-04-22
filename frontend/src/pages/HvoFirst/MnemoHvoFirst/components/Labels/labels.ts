@@ -1,0 +1,30 @@
+import styles from './labels.module.scss';
+import { LabelItem } from '../../../../../types/interface.ts';
+
+export const labels: LabelItem[] = [
+  { text: 'Помещение-2', className: styles['pomeshenie-2-text'] },
+  { text: 'Задание', className: styles['zadanie-uroven-e1-1-2-text'] },
+  { text: 'Ф1/1', className: styles['f1-1-text'] },
+  { text: 'Ф1/2', className: styles['f1-2-text'] },
+  { text: 'Ф1/3', className: styles['f1-3-text'] },
+  { text: 'Ф1/4', className: styles['f1-4-text'] },
+  { text: 'Ф2/1', className: styles['f2-1-text'] },
+  { text: 'Ф2/2', className: styles['f2-2-text'] },
+  { text: 'Ф2/3', className: styles['f2-3-text'] },
+  { text: 'Е1/1', className: styles['e1-1-text'] },
+  { text: 'Е1/2', className: styles['e1-2-text'] },
+  { text: 'H1/1', className: styles['n1-1-text'] },
+  { text: 'H1/2', className: styles['n1-2-text'] },
+  { text: 'H1/3', className: styles['n1-3-text'] },
+  { text: 'H2/1', className: styles['n2-1-text'] },
+  { text: 'H2/2', className: styles['n2-2-text'] },
+  { text: 'H3/1', className: styles['n3-1-text'] },
+  { text: 'H3/2', className: styles['n3-2-text'] },
+  { text: 'Q на промывку', className: styles['rashod-na-promyvku-text'] },
+  { text: 'Q на входе', className: styles['rashod-na-vhode-text'] },
+  { text: 'P на входе', className: styles['davl-vhod-ustanivki-text'] },
+  { text: 'P перед фильтрами', className: styles['davl-posle-nasosov-1-1-2-3-text'] },
+  { text: 'ИМ1', className: styles['kontrol-im-1-text'] },
+  { text: 'P перед Ф3/1-7', className: styles['davl-pered-f3-1-7-text'] },
+  { text: 'P на промывку Ф1/1-4, Ф2/1-3', className: styles['davl-posle-nasosov-3-1-2-text'] },
+];
