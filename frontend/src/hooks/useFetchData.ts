@@ -3,10 +3,9 @@ import { API_BASE_URL } from '../apiConfig.ts';
 
 export const useFetchData = <T>(
   api: string,
-): { loading: boolean; data: T | null; error: boolean } => {
+): { loading: boolean; data: T | null;} => {
   const [loading, setLoading] = useState<boolean>(true);
   const [data, setData] = useState<T | null>(null);
-  const [error, setError] = useState<boolean>(false);
 
   const fetchData = useCallback(async () => {
     try {
@@ -20,7 +19,6 @@ export const useFetchData = <T>(
     } catch (error) {
       console.error('Ошибка при загрузке данных:', error);
       setLoading(false);
-      setError(true);
     }
   }, [api]);
 
@@ -32,5 +30,5 @@ export const useFetchData = <T>(
     return () => clearInterval(intervalId);
   }, [fetchData]);
 
-  return { loading, data, error };
+  return { loading, data };
 };

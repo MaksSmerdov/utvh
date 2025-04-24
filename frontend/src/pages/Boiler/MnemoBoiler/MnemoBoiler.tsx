@@ -17,12 +17,12 @@ import ValveDisplayBoiler from './components/Display/ValveDisplayBoiler.tsx';
 
 const MnemoBoiler: React.FC = () => {
   const { id } = useParams();
-  const { loading, data, error } = useFetchData<BoilerData>(`kotel${id}-data`);
+  const { loading, data } = useFetchData<BoilerData>(`kotel${id}-data`);
   const [tooltipsEnabled, setTooltipsEnabled] = useState(true);
   const [openModal, setOpenModal] = useState(false);
 
-  if (loading || !data) return <Loader />;
-  if (error) return <ErrorMessage />;
+  if (loading) return <Loader />;
+  if (!data) return <ErrorMessage />;
 
   return (
     <>
@@ -95,7 +95,7 @@ const MnemoBoiler: React.FC = () => {
         </div>
       </div>
       <ModalBoiler open={openModal} onClose={() => setOpenModal(false)} />
-      
+
     </>
   );
 };

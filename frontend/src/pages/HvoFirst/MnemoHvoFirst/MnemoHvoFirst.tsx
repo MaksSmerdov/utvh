@@ -17,12 +17,12 @@ import ModalHvoFirst from './components/ModalHvoFirst/ModalHvoFirst.tsx';
 import StaticLabels from '../../../components/StaticLabels/StaticLabels.tsx';
 
 const MnemoHvoFirst: React.FC = () => {
-  const { loading, data, error } = useFetchData<HvoFirstData>(`hvo1-data`);
+  const { loading, data } = useFetchData<HvoFirstData>(`hvo1-data`);
   const [tooltipsEnabled, setTooltipsEnabled] = useState(true);
   const [openModal, setOpenModal] = useState(false);
 
   if (loading) return <Loader />;
-  if (error || !data) return <ErrorMessage />;
+  if (!data) return <ErrorMessage />;
 
   return (
     <>

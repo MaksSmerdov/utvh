@@ -16,12 +16,12 @@ import ParamDisplayHvoSecond from './components/Display/ParamDisplayHvoSecond.ts
 import Valve from '../../../components/Valve/Valve.tsx';
 
 const MnemoHvoSecond: React.FC = () => {
-  const { loading, data, error } = useFetchData<HvoSecondData>(`hvo2-data`);
+  const { loading, data } = useFetchData<HvoSecondData>(`hvo2-data`);
   const [tooltipsEnabled, setTooltipsEnabled] = useState(true);
   const [openModal, setOpenModal] = useState(false);
 
   if (loading) return <Loader />;
-  if (error || !data) return <ErrorMessage />;
+  if (!data) return <ErrorMessage />;
 
   return (
     <>

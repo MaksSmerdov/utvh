@@ -27,9 +27,7 @@
     background-color: vars.$sharp-pebbles;
     border-radius: 7px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
-    cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-    z-index: 1;
   }
 
   &__param.no-cursor {

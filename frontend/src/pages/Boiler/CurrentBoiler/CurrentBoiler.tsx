@@ -17,10 +17,10 @@ const unitsMap: Record<string, string> = {
 
 const CurrentBoiler: React.FC = () => {
   const { id } = useParams();
-  const { loading, data, error } = useFetchData<BoilerData>(`kotel${id}-data`);
+  const { loading, data } = useFetchData<BoilerData>(`kotel${id}-data`);
 
   if (loading) return <Loader />;
-  if (error || !data) return <ErrorMessage />;
+  if (!data) return <ErrorMessage />;
 
   const sensorDataWithUnits = Object.fromEntries(
     Object.entries(data.parameters).map(([name, value]) => {
