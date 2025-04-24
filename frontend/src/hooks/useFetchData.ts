@@ -3,33 +3,32 @@ import { API_BASE_URL } from '../apiConfig.ts';
 
 export const useFetchData = <T>(
   api: string,
-): { loading: boolean; data: T | null; error: Error | null } => {
-  const [loading, setLoading] = useState(true);
+): { loading: boolean; data: T | null; error: boolean } => {
+  const [loading, setLoading] = useState<boolean>(true);
   const [data, setData] = useState<T | null>(null);
-  const [error, setError] = useState<Error | null>(null);
+  const [error, setError] = useState<boolean>(false);
 
   const fetchData = useCallback(async () => {
-    setError(null);
     try {
       const response = await fetch(`${API_BASE_URL}api/${api}`);
+      const result = await response.json();
       if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
+        throw new Error(`HTTP ${response.status} ${response.statusText}`);
       }
-      const result: T = await response.json();
       setData(result);
       setLoading(false);
-    } catch (e: any) {
-      console.error('Ошибка при загрузке данных:', e);
-      setError(e);
-      setData(null);
-    } finally {
+    } catch (error) {
+      console.error('Ошибка при загрузке данных:', error);
       setLoading(false);
+      setError(true);
     }
   }, [api]);
 
   useEffect(() => {
-    fetchData();
-    const intervalId = setInterval(fetchData, 10_000);
+    void fetchData();
+    const intervalId = setInterval(() => {
+      void fetchData();
+    }, 5000);
     return () => clearInterval(intervalId);
   }, [fetchData]);
 

@@ -31,7 +31,7 @@ const paramKeys: HvoItem[] = [
     sourceFirst: 'pressures',
     className: 'davl-posle-nasosov-1-1-2-3',
     tooltip: 'mida',
-    unit: 'кг/м²',
+    unit: 'кг/см²',
   },
   {
     key: 'Уровень воды в емкости E1/1',
@@ -59,14 +59,14 @@ const paramKeys: HvoItem[] = [
     sourceFirst: 'pressures',
     className: 'davl-posle-nasosov-2-1-2',
     tooltip: 'mida',
-    unit: 'кгс/м²',
+    unit: 'кгс/см²',
   },
   {
     key: 'Давление воды после насосов H3/1,2',
     sourceFirst: 'pressures',
     className: 'davl-posle-nasosov-3-1-2',
     tooltip: 'mida',
-    unit: 'кгс/м²',
+    unit: 'кгс/см²',
   },
   {
     key: 'Контроль положения ИМ1',
