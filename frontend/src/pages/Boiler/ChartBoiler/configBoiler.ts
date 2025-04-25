@@ -11,3 +11,9 @@ export const levelParams: ConfigParam[] = [
   { keyPrefix: 'ИМ уровня', label: 'ИМ уровня' },
 ];
 
+export const imParams: ConfigParam[] = [
+  { keyPrefix: 'ИМ разрежения', label: 'ИМ разрежения' },
+  { keyPrefix: 'ИМ воздуха', label: 'ИМ воздуха' },
+  { keyPrefix: 'ИМ газа', label: 'ИМ газа' },
+  { keyPrefix: 'ИМ уровня', label: 'ИМ уровня' },
+];

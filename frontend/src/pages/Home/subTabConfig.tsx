@@ -16,6 +16,7 @@ export const subtabsConfig: Record<string, SubtabItem[]> = {
     { label: 'Графики разрежения', value: 'vacuumChart', icon: <FaChartBar /> },
     { label: 'Графики воздуха', value: 'airChart', icon: <FaChartBar /> },
     { label: 'Графики пара', value: 'steamChart', icon: <FaChartBar /> },
+    { label: 'Графики ИМ', value: 'imChart', icon: <FaChartBar /> },
   ],
   hvo: [
     { label: 'Параметры', value: 'current', icon: <FaTable /> },
