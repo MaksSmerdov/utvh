@@ -16,12 +16,20 @@ const CurrentHvoFirst: React.FC = () => {
     <>
       <Header title={`ХВО щит №1`} />
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-        <CurrentTable sensorData={data.pressures} title="Давления" unit="кгс/cм²" />
-        <CurrentTable sensorData={data.flows} title="Расходы" unit="м³/ч" />
-        <CurrentTable sensorData={data.levels} title="Уровни" unit="мм" />
-        <CurrentTable sensorData={data.frequency} title="Частоты" unit="% / Гц" />
-        <CurrentTable sensorData={data.task} title="Задания" unit="%" />
-        <CurrentTable sensorData={data.others} title="Остальные параметры" />
+        {data.pressures && (
+          <CurrentTable sensorData={data.pressures} title="Давления" unit="кгс/cм²" />
+        )}
+        {data.flows && (
+          <CurrentTable sensorData={data.flows} title="Расходы" unit="м³/ч" />
+        )}
+        {data.levels && (
+          <CurrentTable sensorData={data.levels} title="Уровни" unit="мм" />
+        )}
+        {data.frequency && (
+          <CurrentTable sensorData={data.frequency} title="Частоты" unit="% / Гц" />
+        )}
+        {data.task && <CurrentTable sensorData={data.task} title="Задания" unit="%" />}
+        {data.others && <CurrentTable sensorData={data.others} title="Остальные параметры" />}
       </div>
     </>
   );

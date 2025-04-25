@@ -35,7 +35,6 @@ export const devicesConfig = [
     readDataFunction: 'readDataKotel3',
     serviceModule: './services/kotel3Service.js',
   },
-
   {
     name: 'Hvo1',
     deviceID: 1,
@@ -60,4 +59,4 @@ export const devicesConfig = [
     readDataFunction: 'readDataHvo2',
     serviceModule: './services/hvo2Service.js',
   },
-]
+];

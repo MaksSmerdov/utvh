@@ -50,20 +50,20 @@ const MnemoHvoSecond: React.FC = () => {
             size={{ width: 20, height: 14 }}
             orientation={'horizontal'}
             threshold={5}
-            value={data.others['Контроль положения ИМ2']}
+            value={data.others?.['Контроль положения ИМ2']}
           />
         </div>
 
         <div className={`${styles['mnemo__level']} ${styles['e2-1-titan']}`}>
           <LevelIndicator
-            value={data.levels['Уровень воды в E2/1 (Титан)']}
+            value={data.levels?.['Уровень воды в E2/1 (Титан)']}
             range={{ min: 0, max: 6000 }}
             threshold={0}
           />
         </div>
         <div className={`${styles['mnemo__level']} ${styles['e2-1-mida']}`}>
           <LevelIndicator
-            value={data.levels['Уровень воды в E2/1 (Мида)']}
+            value={data.levels?.['Уровень воды в E2/1 (Мида)']}
             range={{ min: 0, max: 6000 }}
             threshold={0}
             color="blue"

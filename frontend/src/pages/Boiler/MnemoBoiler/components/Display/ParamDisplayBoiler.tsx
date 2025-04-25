@@ -66,7 +66,7 @@ const ParamDisplayBoiler: React.FC<ParamDisplayProps> = ({ data, tooltipsEnabled
           >
             <div className={`${styles['mnemo__param-naimenov']}`}>{param.name}</div>
             <div className={`${styles['mnemo__param-text']}`}>
-              <div className={`${styles['mnemo__param-value']}`}>{data.parameters[param.key || '']}</div>
+              <div className={`${styles['mnemo__param-value']}`}>{data.parameters?.[param.key || '']}</div>
               <div className={`${styles['mnemo__param-span']}`}>{param.unit}</div>
             </div>
           </div>

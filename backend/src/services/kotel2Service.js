@@ -43,9 +43,9 @@ export const readDataKotel2 = async (modbusClient, deviceID, deviceLabel) => {
       'Работа дымососа': 9,
     };
 
-    function decodeFlags(word, map) {
+    function decodeFlags (word, map) {
       return Object.fromEntries(
-        Object.entries(map).map(([label, bit]) => [label, Boolean(word & (1 << bit))])
+        Object.entries(map).map(([label, bit]) => [label, Boolean(word & (1 << bit))]),
       );
     }
 
@@ -101,7 +101,7 @@ export const readDataKotel2 = async (modbusClient, deviceID, deviceLabel) => {
 
     // Сохранение данных в базу данных
     await new Kotel2Model(formattedDataKotel2).save();
-    console.log(formattedDataKotel2);
+    // console.log(formattedDataKotel2);
   } catch (err) {
     console.error(`[${deviceLabel}] Ошибка при чтении данных:`, err);
   }

@@ -20,7 +20,7 @@ const CurrentBoiler: React.FC = () => {
   const { loading, data } = useFetchData<BoilerData>(`kotel${id}-data`);
 
   if (loading) return <Loader />;
-  if (!data) return <ErrorMessage />;
+  if (!data?.parameters) return <ErrorMessage />;
 
   const sensorDataWithUnits = Object.fromEntries(
     Object.entries(data.parameters).map(([name, value]) => {
@@ -28,7 +28,7 @@ const CurrentBoiler: React.FC = () => {
       const num = Number(value);
       const displayName = `${name}${unit}`;
       return [displayName, num] as [string, number];
-    })
+    }),
   );
 
   return (

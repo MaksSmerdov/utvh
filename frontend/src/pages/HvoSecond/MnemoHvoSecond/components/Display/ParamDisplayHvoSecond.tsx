@@ -196,7 +196,7 @@ const ParamDisplayHvoSecond: React.FC<ParamDisplayProps> = ({ data, tooltipsEnab
             className={`${styles['mnemo__param']} ${styles[param.className]} ${tooltipsEnabled ? styles['enabled'] : ''}`}
           >
             <div className={`${styles['mnemo__param-text']}`}>
-              {data[param.sourceSecond!][param.key]}
+              {data[param.sourceSecond!]?.[param.key]}
             </div>
             <div className={`${styles['mnemo__param-naimenov']}`}>
               {param.unit}

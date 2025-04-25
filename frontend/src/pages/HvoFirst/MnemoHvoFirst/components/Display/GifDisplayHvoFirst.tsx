@@ -12,7 +12,7 @@ const GifDisplayHvoFirst: React.FC<GifDisplayProps> = ({ data }) => {
     {
       src: '/img/hvo/ventilator.png',
       className: `${styles['mnemo__gif']} ${styles['mnemo__gif-pump-1-1']}`,
-      value: data.frequency['Рабочая частота насоса H1/1'],
+      value: data.frequency?.['Рабочая частота насоса H1/1'],
       conditionType: 'greaterThan',
       compareValue: Number(5),
       isAnimation: true,
@@ -20,7 +20,7 @@ const GifDisplayHvoFirst: React.FC<GifDisplayProps> = ({ data }) => {
     {
       src: '/img/hvo/ventilator.png',
       className: `${styles['mnemo__gif']} ${styles['mnemo__gif-pump-1-2']}`,
-      value: data.frequency['Рабочая частота насоса H1/2'],
+      value: data.frequency?.['Рабочая частота насоса H1/2'],
       conditionType: 'greaterThan',
       compareValue: Number(5),
       isAnimation: true,
@@ -28,7 +28,7 @@ const GifDisplayHvoFirst: React.FC<GifDisplayProps> = ({ data }) => {
     {
       src: '/img/hvo/ventilator.png',
       className: `${styles['mnemo__gif']} ${styles['mnemo__gif-pump-2-1']}`,
-      value: data.frequency['Рабочая частота насоса H2/1'],
+      value: data.frequency?.['Рабочая частота насоса H2/1'],
       conditionType: 'greaterThan',
       compareValue: Number(5),
       isAnimation: true,
@@ -36,7 +36,7 @@ const GifDisplayHvoFirst: React.FC<GifDisplayProps> = ({ data }) => {
     {
       src: '/img/hvo/ventilator.png',
       className: `${styles['mnemo__gif']} ${styles['mnemo__gif-pump-2-2']}`,
-      value: data.frequency['Рабочая частота насоса H2/2'],
+      value: data.frequency?.['Рабочая частота насоса H2/2'],
       conditionType: 'greaterThan',
       compareValue: Number(5),
       isAnimation: true,

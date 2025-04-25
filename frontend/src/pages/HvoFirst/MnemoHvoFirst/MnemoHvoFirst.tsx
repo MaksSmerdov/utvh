@@ -46,7 +46,7 @@ const MnemoHvoFirst: React.FC = () => {
           <Valve
             size={{ width: 20, height: 14 }}
             threshold={5}
-            value={data.others['Контроль положения ИМ1']}
+            value={data.others?.['Контроль положения ИМ1']}
           />
         </div>
         <GifDisplayHvoFirst data={data} />
@@ -55,7 +55,7 @@ const MnemoHvoFirst: React.FC = () => {
 
         <div className={`${styles['mnemo__level-1']}`}>
           <LevelIndicator
-            value={data.levels['Уровень воды в емкости E1/1']}
+            value={data.levels?.['Уровень воды в емкости E1/1']}
             range={{ min: 0, max: 1600 }}
             threshold={0}
           />
@@ -63,7 +63,7 @@ const MnemoHvoFirst: React.FC = () => {
 
         <div className={`${styles['mnemo__level-2']}`}>
           <LevelIndicator
-            value={data.levels['Уровень воды в емкости E1/2']}
+            value={data.levels?.['Уровень воды в емкости E1/2']}
             range={{ min: 0, max: 1600 }}
             threshold={0}
           />

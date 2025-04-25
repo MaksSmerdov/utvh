@@ -44,11 +44,11 @@ const MnemoBoiler: React.FC = () => {
         <img src="/img/boiler/kotel.png" alt="Котел" className={`${styles['mnemo__img']}`} />
 
         <ParamDisplayBoiler data={data} tooltipsEnabled={tooltipsEnabled} />
-        <ValveDisplayBoiler valveStatus={data?.info?.['Клапан отсекатель']} />
+        <ValveDisplayBoiler valveStatus={data.info?.['Клапан отсекатель']} />
         <GifDisplayBoiler data={data} />
 
         {imLabels.map((label) => {
-          const value = data.im[`${label.name}`];
+          const value = data.im?.[`${label.name}`];
           return (
             <div key={label.name} className={`${styles['im']} ${styles[label.className]}`}>
               {value} %
@@ -88,7 +88,7 @@ const MnemoBoiler: React.FC = () => {
 
         <div className={`${styles['mnemo__level']}`}>
           <LevelIndicator
-            value={data.parameters['Уровень в барабане котла']}
+            value={data.parameters?.['Уровень в барабане котла']}
             range={{ min: -315, max: 315 }}
             threshold={35.7}
           />
